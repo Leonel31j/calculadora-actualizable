@@ -1,5 +1,16 @@
 import tkinter as tk
 
+# Al inicio del archivo
+from updater import check_for_updates
+
+class Calculadora:
+    def __init__(self, master):
+        # ... (tu código actual)
+        self.master.after(1000, self.check_updates)  # Chequear al iniciar
+
+    def check_updates(self):
+        check_for_updates()  # Llama al módulo de actualización
+
 class Calculadora:
     def __init__(self, master):
         self.master = master
